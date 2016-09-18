@@ -1,56 +1,23 @@
 import { Component } from '@angular/core';
+import { LoaderService } from '../loader/loader.service';
+const usageShort = require('raw!../email-demo/email-demo.short.ts.txt');
+const usageCode = require('raw!../email-demo/email-demo.component.ts.txt');
+const usageHtml = require('raw!../email-demo/email-demo.html.txt');
 
 @Component({
-  selector: 'demo-email',
-  templateUrl: './email.component.html'
+    selector: 'demo-email',
+    templateUrl: './email.component.html',
+    styleUrls: ['./email.component.css']
 })
 export class EmailComponent {
-  public usageCode: string;
-  public usageHtml: string;
-  ngOnInit() {
-      this.usageCode = `
-// my-component.ts
-import { ValidationComponent, Angulators } as Angulators from 'angulators';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+    public usageShort: string;
+    public usageCode: string;
+    public usageHtml: string;
+    constructor(private loader: LoaderService) { }
 
-@Component({
-    selector: 'my-component',
-    templateUrl: 'my-component.html'
-})
-export class MyComponent extends ValidationComponent {
-    form: FormGroup;
-    email: string;
-    constructor(private fb: FormBuilder) { }
-
-    formErrors = {
-        email: ''
-    };
-
-    validationMessages = {
-        email: {
-            required: 'Please provide your email.',
-            email: 'Please provide a valid email.'
-        }
-    };
-
-    buildForm() {
-        this.form = this.fb.group({
-            'email': [this.email, [
-                    Validators.required,
-                    Angulators.email()
-                ]
-            ]
-        });
-        super.buildForm();
+    ngOnInit() {
+        this.usageShort = usageShort;
+        this.usageCode = usageCode;
+        this.usageHtml = usageHtml;
     }
-}
-      `;
-
-      this.usageHtml = `
-<!-- my-component.html -->
-<validation-message [error]="formErrors.email">
-</validation-message>
-<input type="email" id="email" formControlName="email" required>
-      `;
-  }
 }

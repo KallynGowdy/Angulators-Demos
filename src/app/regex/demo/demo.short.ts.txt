@@ -1,0 +1,5 @@
+// Regex validators need to be created with a regular expression
+let validator = Angulators.regex(/^abcdef$/)
+
+let result = validator({ value: 'test' });
+expect(result.regex).toBe('test');

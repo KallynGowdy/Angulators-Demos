@@ -1,0 +1,8 @@
+<form [formGroup]="form">
+    <md-input 
+        id="value" 
+        type="text" 
+        formControlName="value"
+        [placeholder]="formErrors.value || 'Enter your value'" 
+        dividerColor="warn"></md-input>
+</form>

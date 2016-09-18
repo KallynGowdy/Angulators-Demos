@@ -1,0 +1,8 @@
+<form [formGroup]="form">
+    <md-input 
+        id="email" 
+        type="email" 
+        formControlName="email" 
+        [placeholder]="formErrors.email || 'Enter your email'" 
+        dividerColor="warn"></md-input>
+</form>
