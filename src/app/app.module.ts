@@ -16,6 +16,9 @@ import { EmailDemoComponent } from './email-demo/email-demo.component';
 import { DemoRegexComponent } from './regex/regex.component';
 import { RegexDemoComponent } from './regex/demo/demo.component';
 
+import { DemoEqualsComponent } from './equals/equals.component';
+import { EqualsDemoComponent } from './equals/demo/demo.component';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -25,7 +28,10 @@ import { RegexDemoComponent } from './regex/demo/demo.component';
         EmailDemoComponent,
 
         DemoRegexComponent,
-        RegexDemoComponent
+        RegexDemoComponent,
+
+        DemoEqualsComponent,
+        EqualsDemoComponent
     ],
     imports: [
         BrowserModule,

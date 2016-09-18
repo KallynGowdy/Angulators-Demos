@@ -1,0 +1,13 @@
+let form = {
+    get(controlName) {
+        if(controlName === 'password') {
+            return { value: 'The Password' };
+        } else {
+            return null;
+        }
+    }
+};
+let validator = Angulators.equals(() => form, 'password') 
+
+let result = validator({ value: 'The Confirmed' });
+expect(result['equals-password']).toBe('The Confirmed');

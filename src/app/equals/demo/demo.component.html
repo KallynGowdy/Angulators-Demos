@@ -1,0 +1,14 @@
+<form [formGroup]="form">
+    <md-input 
+        id="password" 
+        type="password" 
+        formControlName="password"
+        [placeholder]="formErrors.password || 'Enter a password'" 
+        dividerColor="warn"></md-input>
+    <md-input 
+        id="confirmPassword" 
+        type="password" 
+        formControlName="confirmPassword"
+        [placeholder]="formErrors.confirmPassword || 'Confirm your password'" 
+        dividerColor="warn"></md-input>
+</form>
