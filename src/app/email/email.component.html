@@ -1,0 +1,25 @@
+<div class="container">
+
+    <md-tab-group>
+        <md-tab>
+            <template md-tab-label>TypeScript</template>
+            <template md-tab-content>
+                <high-light lang="typescript" [content]="usageCode">
+                </high-light>
+            </template>
+        </md-tab>
+        <md-tab>
+            <template md-tab-label>HTML</template>
+            <template md-tab-content>
+                <high-light lang="html" [content]="usageHtml">
+                </high-light>
+            </template>
+        </md-tab>
+        <md-tab>
+            <template md-tab-label>Example</template>
+            <template md-tab-content>
+                <my-component></my-component>
+            </template>
+        </md-tab>
+    </md-tab-group>
+</div>
