@@ -4,5 +4,7 @@ let validator = Angulators.email()
 // You can specify the name of the "error" property
 validator = Angulators.email('property')
 
+// All of the validators return null if value is valid, otherwise
+// they return an object.
 let result = validator({ value: 'test' });
 expect(result.property).toBe('test');

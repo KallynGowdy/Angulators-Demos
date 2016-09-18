@@ -1,12 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { MdCardModule } from '@angular2-material/card';
 import { MdInputModule } from '@angular2-material/input';
 import { MdTabsModule } from '@angular2-material/tabs';
-import { AppComponent } from './app.component';
+import { MdButtonModule } from '@angular2-material/button';
+
 import { HighlightModule } from './ext/highlight/highlight.module';
+
+import { AppComponent } from './app.component';
 import { FormsComponent } from './forms/forms.component';
 import { LoaderService } from './loader/loader.service';
 
@@ -38,10 +42,13 @@ import { EqualsDemoComponent } from './equals/demo/demo.component';
         FormsModule,
         ReactiveFormsModule,
         HttpModule,
-        MdCardModule,
+        
         HighlightModule,
+        
+        MdCardModule,
         MdInputModule,
-        MdTabsModule
+        MdTabsModule,
+        MdButtonModule
     ],
     providers: [LoaderService],
     bootstrap: [AppComponent]

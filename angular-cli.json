@@ -16,7 +16,7 @@
       "mobile": false,
       "styles": [
         "styles.css",
-        "../node_modules/highlight.js/styles/darcula.css"
+        "../node_modules/highlight.js/styles/tomorrow-night.css"
       ],
       "scripts": [],
       "environments": {
